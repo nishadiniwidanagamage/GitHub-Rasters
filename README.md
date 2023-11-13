@@ -7,19 +7,16 @@ Accept the GitHub Classroom assignment <code>GitHub-Raster</code> and clone the 
 
 ### Task:
 
-Edit the provided Python file called <code>GitHub-Rasters.py</code> to create a new stand-alone script that includes the following features and capabilities.  For this script, there is no requirement to include user-defined inputs or any messaging, except for a custom print message should your script throw an exception (see the requirement below for a "try-except" block):
+Edit the provided Python file called <code>GitHub-Rasters.py</code> to create a new stand-alone script that calculats normalized difference vegetation index (NDVI) from a multi-band raster dataset.  Be sure your script includes the following features and capabilities.  For this script, there is no requirement to include user-defined inputs or any messaging, except for a custom print message should your script throw an exception (see the requirement below for a "try-except" block):
 
-1. Incorporates an insert cursor to add five new observations of lesser prairie chickens to the existing feature class <code>tympanuchus_pallidicinctus</code>.  
-2. Uses the Python <code>fileinput</code> module and related methods to read in the new observations in the provided text file <code>newchickens.txt</code>.
-3. Incorporates an update cursor to add the species name *Tympanuchus pallidicinctus* to the "label" field, x- and y-coordinates of each observation to the "long" and "lat" fields, and a value of 1 to the "abundance" field of the new records in the final output.
-4. Finishes by computing a minimum bounding polygon as a rough estimate of the species range.  For this, use the function [<code>arcpy.management.MinimumBoundingGeometry</code>](https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/minimum-bounding-geometry.htm) using the geometry type CONVEX_HULL.  Read the tool help file for this function closely, as it may have special licensing or extension requirements to account for in your script.
-5. Includes at least one "try-except" block to trap geoprocessing errors.
-
-Also include in your script a section that establishes the following three, and only these three, local variables.  Modify the path to the <code>inFile</code> variable so it works properly on your computer.
-
-<code>inFile = "D:/GitHub/GitHub-OtherCursors/newchickens.txt"</code><br>
-<code>inFc = "tympanuchus_pallidicinctus"</code><br>
-<code>pt = arcpy.Point()</code>
+1. Uses one of the three available Landsat 8 images as the raster input.
+2. Uses at least one, but no more than three, local variables.
+3. Uses only Spatial Analyst tools – no Python math!
+4. Checks out/in the Spatial Analyst extension.
+5. Uses at least one "if-else" and "try-except" block for error trapping.
+6. Saves one file – the output NDVI grid - to a workspace other than current workspace.
+7. Prints only one message – either script success, user lacks the required extension, or a Level 2 geoprocessing error message.
+8. The "script success" message should also report name of output file, its spatial resolution, and units..
 
 ## Rubric:
 
