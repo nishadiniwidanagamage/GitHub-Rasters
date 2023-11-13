@@ -11,7 +11,7 @@ Edit the provided Python file called <code>GitHub-Rasters.py</code> to create a 
 
 1. Uses one of the three available Landsat 8 images as the raster input.
 2. Uses at least one, but no more than three, local variables.
-3. Uses only Spatial Analyst tools – no Python math!
+3. Uses only Spatial Analyst functions – no Python math!
 4. Checks out/in the Spatial Analyst extension.
 5. Uses at least one "if-else" and "try-except" block for error trapping.
 6. Saves one file – the output NDVI grid - to a workspace other than current workspace.
