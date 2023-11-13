@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    File name: GitHub-OtherCursors.py
+    File name: GitHub-Rasters.py
     Author: ENTER YOUR  NAME
     Description:  ENTER BRIEF DESCRIPTION
     Date created: ENTER TODAY'S DATE in MM/DD/YYYY FORMAT
