@@ -14,7 +14,7 @@ Edit the provided Python file called <code>GitHub-Rasters.py</code> to create a 
 3. Uses only Spatial Analyst functions – no Python math!
 4. Checks out/in the Spatial Analyst extension.
 5. Uses at least one "if-else" and "try-except" block for error trapping.
-6. Saves one file – the output NDVI grid - to a workspace other than current workspace.
+6. Saves one file – the output NDVI grid - to a workspace other than current workspace using one or more os module functions.
 7. Prints only one message – either script success, user lacks the required extension, or a Level 2 geoprocessing error message.
 8. The "script success" message should also report name of output file, its spatial resolution, and units..
 
