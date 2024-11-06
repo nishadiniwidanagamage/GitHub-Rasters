@@ -7,7 +7,7 @@ Accept the GitHub Classroom assignment <code>GitHub-Raster</code> and clone the 
 
 ### Task:
 
-Edit the provided Python file called <code>GitHub-Rasters.py</code> to create a new stand-alone script that calculats normalized difference vegetation index (NDVI) from a multi-band raster dataset.  Be sure your script includes the following features and capabilities.  For this script, there is no requirement to include user-defined inputs or any messaging, except for a custom print message should your script throw an exception (see the requirement below for a "try-except" block):
+Edit the provided Python file called <code>GitHub-Rasters.py</code> to create a new stand-alone script that calculates normalized difference vegetation index (NDVI) from a multi-band raster dataset.  Be sure your script includes the following features and capabilities.  For this script, there is no requirement to include user-defined inputs or any messaging, except for a custom print message should your script throw an exception (see the requirement below for a "try-except" block):
 
 1. Uses one of the three available Landsat 8 images as the raster input.
 2. Uses at least one, but no more than three, local variables.
