@@ -17,24 +17,25 @@ arcpy.env.overwriteOutput = True
 # Establish local variable(s)
 inRaster = "dem10"
 outRaster = "slope10_5"
-outDem = "dem10_ft"
 outWorkspace = "D:/GitHub/GitHub-Rasters/GitHub-Rasters.gdb"
 
 # Perform geoprocessing and trap errors
 try:
     if arcpy.CheckExtension("Spatial") == "Available":
         arcpy.CheckOutExtension("Spatial")
-        demGrid = arcpy.Raster(inRaster)
-        desc = arcpy.Describe(demGrid)
+        desc = arcpy.Describe(inRaster)
         if desc.spatialReference.linearUnitName == "Meter":
+            demGrid = arcpy.Raster(inRaster)
             outGrid = demGrid * 3.28084
-            outGrid.save(os.path.join(outWorkspace, outDem))
+            outSlope = arcpy.sa.Slope(outGrid)
+            outSlope.save(os.path.join(outWorkspace, outRaster))
+            arcpy.CheckInExtension("Spatial")
         else:
             print("Grid units = {0}, conversion not needed.".format
             (desc.spatialReference.linearUnitName))
-        outGrid = arcpy.sa.Slope(inRaster)
-        outGrid.save(os.path.join(outWorkspace, outRaster))
-        arcpy.CheckInExtension("Spatial")
+            outGrid = arcpy.sa.Slope(inRaster)
+            outGrid.save(os.path.join(outWorkspace, outRaster))
+            arcpy.CheckInExtension("Spatial")
     else:
         print("Required extension not available.")
 except arcpy.ExecuteError:
