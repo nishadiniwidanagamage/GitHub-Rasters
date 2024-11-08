@@ -9,7 +9,7 @@
     Python Version: 3.9.16
 """
 
-# Import arcpy module and allow overwrites
+# Import arcpy module and allow overwriting
 import arcpy
 import os
 from arcpy.sa import Minus, Plus, Divide
