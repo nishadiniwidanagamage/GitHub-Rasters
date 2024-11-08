@@ -4,7 +4,7 @@
 """
     File name: GitHub-Rasters.py
     Author: Nishadini Widanagamage
-    Description:  ENTER BRIEF DESCRIPTION
+    Description:  Calculate NDVI using a LANDSAT 8 image
     Date created: 11/06/2024
     Python Version: 3.9.16
 """
