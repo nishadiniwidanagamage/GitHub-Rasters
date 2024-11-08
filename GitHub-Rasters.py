@@ -38,9 +38,21 @@ try:
         # Calculate NDVI
         ndvi = Divide(Minus(nir_band, red_band), Plus(nir_band, red_band))
 
+        # Define the output path for the NDVI raster
+        output_path = os.path.join(out_workspace, "NDVI")
+        
         # Save NDVI output
-        ndvi.save(os.path.join(out_workspace, "NDVI")) 
+        ndvi.save(output_path) 
         print("NDVI calculated and saved")
+
+        # Describe the output raster
+        desc = arcpy.Describe(output_path)
+        spatial_res = f"{desc.meanCellWidth} x {desc.meanCellHeight}"
+        spatial_units = desc.spatialReference.linearUnitName
+
+        # Print sucess message
+        print(f"Script succeeded! Ouput saved as: {output_path}")
+        print(f"Spatial resolution: {spatial_res} {spatial_units}")
 
         # Checking in used extensions 
         arcpy.CheckInExtension("Spatial")
@@ -49,5 +61,6 @@ try:
         print("Spatial extension is not available")
     
 except arcpy.ExecuteError:
+    print("Gelprocessing error occured:")
     print(arcpy.GetMessages(2))
 
